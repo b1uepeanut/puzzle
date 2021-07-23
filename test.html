@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <style>
+             p {
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        button {
+            font-size: 20px;
+            margin: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(196, 230, 173);
+        }
+
+        #btns {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <article> 
+        </article>
+        <input type = "button" value = "시작하기" onclick = "fetchAfterGet(event)";  >
+        <h1></h1>
+        <div>
+            <p id='progress'></p>
+            <p id="world1"></p>
+            <div id='world2'></div>
+            <div id='btns'>
+                <button onclick="swap()">뒤집기</button>
+                <button onclick="Lshift()">왼쪽으로 밀어내기</button>
+                <button onclick="Rshift()">오른쪽으로 밀어내기</button>
+            </div>
+            <p id='check'></p>
+            <p id = 'time'></p>
+        </div>
+    
+    <script src = "test.js"></script>
+    </body>
+</html>
