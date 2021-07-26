@@ -7,7 +7,7 @@
 
     
 
-    $m1 = file_get_contents('hh.djson');
+    $m1 = file_get_contents('hh.json');
     if(isJson($m1)){
         $m2 = json_decode($m1);
         foreach($m2 as $value)
