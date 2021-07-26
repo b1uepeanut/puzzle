@@ -68,7 +68,7 @@ game.addButttons = function () {
 
 game.removeButtons = function(){
     for(var i = 0; i<this.btns.length; i++){
-        world2.removeChild(this.btns[i]);;
+        world2.removeChild(this.btns[i]);
     }
     this.btns = [];
 };
@@ -95,7 +95,6 @@ game.init = function () {
 game.copyBtnText = function () {
     for (var i = 0; i < this.letters.length; i++) {
         this.btns[i].innerHTML = this.letters[i];
-
     }
 };
 
@@ -138,11 +137,35 @@ game.progress = function(){
     }
     if(game.current == game.maxPlay){
         var sec = (Date.now() - game.startTime) / 1000;
-        alert("Good! Thank you for playing " + sec + ' sec');
+        alert(sec + ' sec');
         clearInterval(x);
+        inputName(sec);
     }
 
 }
+
+function inputName(sec) {
+    var m = document.getElementById('test');
+    var t = document.createElement('input');
+    t.type = 'text';
+    t.name = 'time';
+    t.value = sec;
+
+    var n = document.createElement('input');
+    n.type = 'text';
+    n.name = 'name';
+    n.value = 'default';
+
+    var s = document.createElement('input');
+    s.type = 'submit';
+    s.value= '제출';
+
+    m.appendChild(t);
+    m.appendChild(n);
+    m.appendChild(s);
+    
+}
+
 //event handler for swap button
 var swap = function () {
     game.swap();
