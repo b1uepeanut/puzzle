@@ -9,6 +9,8 @@ function doFetchGet() {
     });
 }
 
+var x = 0;
+
 async function fetchAfterGet(event){
     console.log(event);
     //var str = event.target.innerHTML;            
@@ -21,12 +23,14 @@ async function fetchAfterGet(event){
     game.shuffle();
     game.startTime = Date.now();
 
+    x = setInterval(updateTime, 50);
+
+
     var updateTime = function(){
         var now = Date.now() - game.startTime;
         time.innerHTML = (now / 1000);
     };
     
-    var x = setInterval(updateTime, 50);
 }
 
 //html elements
