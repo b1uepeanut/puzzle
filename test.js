@@ -158,6 +158,7 @@ function inputName(sec) {
 
     var s = document.createElement('input');
     s.type = 'submit';
+    s.name = 'submit';
     s.value= '제출';
 
     m.appendChild(t);
