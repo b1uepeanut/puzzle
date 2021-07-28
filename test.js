@@ -144,7 +144,7 @@ game.progress = function(){
 
 }
 
-function inputName(sec) {
+async function inputName(sec) {
     var m = document.getElementById('test');
     var t = document.createElement('input');
     t.type = 'text';
