@@ -23,7 +23,7 @@ if(file_exists('data.json')){
 ?>
 
 <?php 
-        echo "<script type='text/javascript'> 
+        echo "<script> 
         location.replace('rank.php') 
             </script>"; 
 ?> 
