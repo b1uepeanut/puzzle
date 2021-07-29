@@ -24,12 +24,6 @@ async function fetchAfterGet(event){
     game.startTime = Date.now();
 
     x = setInterval(updateTime, 50);
-
-
-    var updateTime = function(){
-        var now = Date.now() - game.startTime;
-        time.innerHTML = (now / 1000);
-    };
     
 }
 
@@ -80,9 +74,9 @@ game.checkGood = function()
 
 game.updateDisplay = function () {
     if (this.checkGood()) {
-        check.innerHTML = '일치!';
+        check.innerHTML = 'correct!';
     } else {
-        check.innerHTML = '일치하지 않음!!';
+        check.innerHTML = 'incorrect!!';
     }
 };
 game.init = function () {
@@ -203,3 +197,8 @@ game.shuffle = function () {
     }
 };
 
+
+var updateTime = function(){
+    var now = Date.now() - game.startTime;
+    time.innerHTML = (now / 1000);
+};
