@@ -22,19 +22,21 @@
     <body>
         <article> 
         </article>
-        <input type = "button" value = "시작하기" onclick = "fetchAfterGet(event)";  >
+        <input type = "button" value = "start" onclick = "fetchAfterGet(event)";  >
         <h1></h1>
         <div id = 'top'>
+            <center>
             <p id='progress'></p>
             <p id="world1"></p>
             <div id='world2'></div>
             <div id='btns'>
-                <button onclick="swap()">뒤집기</button>
-                <button onclick="Lshift()">왼쪽으로 밀어내기</button>
-                <button onclick="Rshift()">오른쪽으로 밀어내기</button>
+                <button onclick="swap()">SWAP</button>
+                <button onclick="Lshift()">LEFT</button>
+                <button onclick="Rshift()">RIGHT</button>
             </div>
             <p id='check'></p>
             <p id = 'time'></p>
+            </center>
         </div>
 
         <form action="input.php" method= 'POST' id= 'test'></form>
